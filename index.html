@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>CGPA Calculator </h1>
+    <p class="lead">CGPA Calculator for BHC</p>
+
+    <form id="cgpaForm" onsubmit="return false;">
+      <div style="display:flex;gap:10px;font-weight:700;margin-bottom:8px;color:#0f172a">
+        <div style="width:10%">#</div>
+        <div style="width:20%">Credits</div>
+        <div style="width:34%">Grade Point</div>
+        <div style="width:36%">Marks</div>
+      </div>
+
+      <div id="subjects">
+        <!-- Subject 1 -->
+        <div class="row">
+          <div style="width:10%"><strong>1</strong></div>
+          <div style="width:20%"><input id="credit1" type="number" value="1" required></div>
+          <div style="width:34%"><input id="gp1" type="number" step="0.1"></div>
+          <div style="width:36%"><input id="marks1" type="number" step="0.1"></div>
+        </div>
+
+        <!-- Subject 2 -->
+        <div class="row">
+          <div style="width:10%"><strong>2</strong></div>
+          <div style="width:20%"><input id="credit2" type="number" value="2" required></div>
+          <div style="width:34%"><input id="gp2" type="number" step="0.1"></div>
+          <div style="width:36%"><input id="marks2" type="number" step="0.1"></div>
+        </div>
+
+        <!-- Subject 3 -->
+        <div class="row">
+          <div style="width:10%"><strong>3</strong></div>
+          <div style="width:20%"><input id="credit3" type="number" value="3" required></div>
+          <div style="width:34%"><input id="gp3" type="number" step="0.1"></div>
+          <div style="width:36%"><input id="marks3" type="number" step="0.1"></div>
+        </div>
+
+        <!-- Subject 4 -->
+        <div class="row">
+          <div style="width:10%"><strong>4</strong></div>
+          <div style="width:20%"><input id="credit4" type="number" value="4" required></div>
+          <div style="width:34%"><input id="gp4" type="number" step="0.1"></div>
+          <div style="width:36%"><input id="marks4" type="number" step="0.1"></div>
+        </div>
+
+        <!-- Subject 5 Optional -->
+        <div class="row">
+          <div style="width:10%"><strong>5</strong></div>
+          <div style="width:20%"><input id="credit5" type="number" placeholder="optional"></div>
+          <div style="width:34%"><input id="gp5" type="number" step="0.1" placeholder="optional"></div>
+          <div style="width:36%"><input id="marks5" type="number" step="0.1" placeholder="optional"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="calcBtn" type="button">Calculate CGPA</button>
+        <button id="resetBtn" type="reset" class="secondary">Reset</button>
+      </div>
+
+      <div class="result">
+        <div class="small">CGPA: <strong id="cgpaDisplay">—</strong></div>
+        <div class="small">Percentage: <strong id="percentDisplay">—</strong></div>
+      </div>
+    </form>
+  </main>
+  
+<script src="app.js"></script>
+</body>
+</html>
